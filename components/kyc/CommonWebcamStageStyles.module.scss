@@ -1,0 +1,140 @@
+@import '../variables';
+@import 'base';
+
+.container {
+  width: 100%;
+  max-width: 64vmax;
+  padding-bottom: space(36);
+  flex-direction: column;
+
+  @extend %centralize;
+}
+
+.bodyContainer {
+  color: $font-color;
+  max-width: 450px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04);
+  background-color: #fefefe;
+  margin-bottom: 32px;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.groupLabel {
+  font-size: 16px;
+  color: #1c1c1c;
+  padding-bottom: 8px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 450px;
+}
+
+.descContainer {
+  margin: 24px 0 32px;
+}
+
+.description {
+  width: auto;
+  padding: 8px 5px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: rgba(21, 53, 78, 0.55);
+  font-family: inherit;
+  word-break: break-word;
+  white-space: pre-wrap;
+  text-align: justify;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  img {
+    padding: 0 0 5px 6px;
+    width: auto !important;
+    border: unset !important;
+  }
+}
+
+.submit {
+  width: 100%;
+  font-size: font(14);
+  padding: space(16);
+
+  @extend %centralize;
+
+  & svg {
+    font-size: 1.1em;
+  }
+
+  & button {
+    height: 48px;
+    max-width: 212px;
+    flex-basis: 50%;
+
+    @include onBetween(null, $mobile-small) {
+      padding: space(4) space(8);
+    }
+  }
+}
+
+.captureAgain {
+  margin-left: 16px;
+}
+
+.capture {
+  padding: space(16);
+  border-radius: radius('rounded') !important;
+  width: 48px !important;
+  height: 48px !important;
+
+  @extend %centralize;
+
+  & svg {
+    font-size: font(22);
+
+    @extend %absolute-center;
+  }
+}
+
+.image {
+  overflow: hidden;
+  position: relative;
+
+  @extend %full-of-Parent;
+
+  img {
+    object-fit: cover;
+
+    @extend %full-of-Parent;
+  }
+}
+
+.message {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  font-size: font(12);
+  background-color: color(danger);
+  color: white;
+  z-index: 3;
+  will-change: transform;
+  transform: translateY(0);
+  transition: transform 0.3s $ant-cubic-bezier;
+
+  @extend %centralize;
+
+  &__hide {
+    transform: translateY(30rem);
+  }
+}

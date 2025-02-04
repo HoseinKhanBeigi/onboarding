@@ -1,0 +1,48 @@
+@import '../../base';
+
+.container {
+  height: 6rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: row-reverse;
+  color: white;
+  font-size: font(12);
+  padding: space(8) 0;
+  position: absolute;
+  top: 0;
+
+  @extend %centralize;
+
+  & svg {
+    width: 1rem;
+    margin: 0 space(8) -#{space(2)};
+    align-self: flex-end;
+    transform: translateY(-2px);
+    transform: rotate(180deg);
+  }
+}
+
+.gesture {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @extend %centralize;
+
+  & > :last-child {
+    line-height: 1;
+    margin-top: space(4);
+    font-size: 60%;
+  }
+
+  & > div {
+    width: 3.2rem;
+    height: 5.4rem;
+
+    @extend %fix-Image-component;
+
+    img {
+      height: 100% !important;
+    }
+  }
+}

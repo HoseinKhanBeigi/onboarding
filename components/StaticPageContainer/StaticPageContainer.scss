@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+}
+
+.groupsContainer {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  justify-content: space-around;
+  padding: 5em 0;
+
+  @media (max-width: 1024px) {
+    width: 380px;
+    padding: 5em 16px 0 16px;
+  }
+
+  :global {
+    .ant-alert {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .groupsContainer {
+    width: 100%;
+  }
+}

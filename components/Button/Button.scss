@@ -1,0 +1,5 @@
+@import '../variables.scss';
+
+.button {
+  @include bordered-button(unset, unset);
+}

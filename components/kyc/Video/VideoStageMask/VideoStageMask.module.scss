@@ -1,0 +1,28 @@
+@import '../../base';
+
+.mask {
+  position: relative;
+  background-image: url('/static/images/video-stage-mask-mobile.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @extend %full-of-Parent;
+
+  @include onBetween($tablet-small) {
+    background-image: url('/static/images/video-stage-mask.svg');
+    background-position: 0;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .desktop {
+    background-image: url('/static/images/video-stage-mask.svg');
+
+    @include onBetween($tablet-small) {
+      background-position: 0;
+      transform: scale(1);
+    }
+  }
+}

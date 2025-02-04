@@ -1,0 +1,13 @@
+@import '../../base';
+
+.loading {
+  z-index: 1;
+  flex-direction: column;
+
+  @extend %absolute-center;
+  @extend %centralize;
+
+  p {
+    margin-top: space(8);
+  }
+}

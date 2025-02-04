@@ -1,0 +1,71 @@
+button[data-testid='toggle-view'] {
+  display: none;
+}
+
+button[data-testid='submit-button'] {
+  background-color: #1890ff !important;
+  color: white !important;
+}
+
+h3[data-testid='days-head-range'] {
+  font-size: 16px !important;
+}
+
+input[data-testid='input-dp'] {
+  width: 100%;
+  height: 42px;
+  margin: 10px 0 2px;
+  padding: 12px 12px 11px 211px;
+  border-radius: 4px;
+  border: solid 1px #cbd8e3;
+}
+
+.labelTItle {
+  display: inline;
+  height: 21px;
+  position: absolute;
+  top: -16.5px;
+  right: 12px;
+  z-index: 1;
+  font-size: 12px;
+  color: #50687a;
+  background: var(--from-bg-color);
+  padding: 0 8px;
+}
+
+.datePickerContainer {
+  z-index: 100;
+
+  div input {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 6px 12px !important;
+    border-radius: 4px;
+    border: solid 1px #cbd8e3 !important;
+    color: #15354e;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--from-bg-color) !important;
+  }
+}
+
+:global {
+  .tether-element.tether-element-attached-center.tether-target-attached-center.tether-enabled {
+    z-index: 1001 !important;
+
+    @media all and (max-width: 1164px) {
+      top: 0 !important;
+      left: 0 !important;
+      position: absolute;
+      transform: none !important;
+      width: calc(100%);
+      height: calc(100%);
+      background: rgba(0, 0, 0, 0.3);
+
+      & > div {
+        margin-top: 16px;
+      }
+    }
+  }
+}

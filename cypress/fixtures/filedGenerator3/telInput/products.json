@@ -1,0 +1,87 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "tel",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {
+                  "required": true,
+                  "input": {
+                    "maxLength": 11,
+                    "message": "مقدار وارد شده نباید از 11 کاراکتر طولانی تر باشد"
+                  }
+                },
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "tel",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {
+                  "required": true,
+                  "input": {
+                    "maxLength": 11,
+                    "message": "مقدار وارد شده نباید از 11 کاراکتر طولانی تر باشد"
+                  }
+                },
+                "actions": {}
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "tel",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {
+                  "required": true,
+                  "input": {
+                    "maxLength": 11,
+                    "message": "مقدار وارد شده نباید از 11 کاراکتر طولانی تر باشد"
+                  }
+                },
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}"
+        }
+      }
+    }
+  ]
+}

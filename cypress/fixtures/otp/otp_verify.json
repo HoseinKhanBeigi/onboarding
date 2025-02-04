@@ -1,0 +1,42 @@
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndjdmVIM1QwUkl4UGw0RFBFMXZFSUdqcDJ1akdJSlRVQlgweU5UakV3SjQifQ.eyJkZXZpY2VfaWQiOiIyNzI0NjU4MDc1NTU3MTk2IiwidXNlcl9uYW1lIjoiMDkxMTExMTExMTEiLCJpcCI6IjE3Mi4xOC4wLjI3IiwiZGV2aWNlX3R5cGUiOiJNT0JJTEUiLCJ1dWlkIjoiZGFjNjYzNzctZjE2NS00OWNhLTgxN2YtNWM5ZWMyNzUwNzA2IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9URVNUIl0sImNsaWVudF9pZCI6ImJyb3dzZXIiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInNjb3BlIjpbIlJPTEVfVEVTVCIsIm90cCJdLCJkZXZpY2VfcGxhdGZvcm0iOiJJT1MiLCJleHAiOjE2MTQ5MzQ3NzcsImFjY2Vzc2VzIjpbeyJyb2xlIjp7Im5hbWUiOiJVU0VSX1JPTEUiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5Ijp7Im5hbWUiOiJST0xFX1RFU1QifSwicmVhZCI6dHJ1ZSwid3JpdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZX0seyJhdXRob3JpdHkiOnsibmFtZSI6IlBBU1NXT1JEIn0sInJlYWQiOnRydWUsIndyaXRlIjp0cnVlLCJkZWxldGUiOnRydWV9XX0sImdyb3VwIjp7Im5hbWUiOiJLSUFOX0RJR0lUQUwifX1dLCJqdGkiOiI1YmUwMmQwZi1mZDJmLTQzNGUtOWZmNy05MjgzNTc1MmViYWEiLCJsZXZhbnRJZCI6IjExOTc3In0.BPPrnhw7pCBrgg0kkdT6C8BFhTM7aMow5fg73PWblXV0D0f4c2FEwpOSRMHU4MFIhicQbws5GgPaUFem-PBta3FNZ5rdo-gt6nc3yG0ilUhoSpGqel6LSWEOanX_YmJAPa_ZwEJ5_oVzKQdf1EeCyM62aIyAlDH7ejvhsxXXmgulwjqVQhTTd7tpe3vH77KSOn4TvFymSj3Xnk47VW6CAO8uviFvMDpMVZAh4RuLGpA6Me59yxPCX1HB_ghus6RmmV1OJXLXsJtN5ovA7AQ_xlFAUHgj3eOJLsMxd5QZnvZAwt-8Hby1vG74WD6QmbDyzdZV5Sz6kaieKd0F2DoJPQ",
+  "token_type": "bearer",
+  "expires_in": 15551998,
+  "scope": "ROLE_TEST otp",
+  "device_id": "2724658075557196",
+  "grant_type": "password",
+  "ip": "172.18.0.27",
+  "device_platform": "IOS",
+  "device_type": "MOBILE",
+  "uuid": "dac66377-f165-49ca-817f-5c9ec2750706",
+  "accesses": [
+    {
+      "role": {
+        "name": "USER_ROLE",
+        "authorities": [
+          {
+            "authority": {
+              "name": "ROLE_TEST"
+            },
+            "read": true,
+            "write": true,
+            "delete": true
+          },
+          {
+            "authority": {
+              "name": "PASSWORD"
+            },
+            "read": true,
+            "write": true,
+            "delete": true
+          }
+        ]
+      },
+      "group": {
+        "name": "Test-Group"
+      }
+    }
+  ],
+  "levantId": "11977",
+  "jti": "5be02d0f-fd2f-434e-9ff7-92835752ebaa"
+}

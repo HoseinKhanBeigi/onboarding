@@ -1,0 +1,221 @@
+.container {
+  margin-bottom: 1em;
+
+  .title {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+  }
+}
+
+.errorMessage {
+  color: red;
+  justify-content: flex-start;
+  font-size: 10px;
+  padding-top: 4px;
+}
+
+.listContainer {
+  display: block;
+  width: 100%;
+  min-height: 0.5em;
+}
+
+.modal {
+  width: auto !important;
+
+  :global {
+    .ant-modal-body {
+      background: #f8f9fd;
+      text-align: right;
+
+      form {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.listItem {
+  width: 100%;
+  height: 3.5rem;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding: 9px 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #fefefe;
+  border: 1px solid #cbd8e3;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @media screen and (max-width: 414px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px 16px;
+    gap: 0;
+    font-size: 5px;
+  }
+}
+
+.listItemSecondColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-end;
+  align-items: flex-end;
+
+  @media screen and (max-width: 414px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 15px;
+  }
+
+  .actionsContainer {
+    flex: 1;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7px;
+
+    .icons {
+      display: flex;
+      padding: 0px 3px;
+      gap: 5px;
+    }
+
+    .editContainer {
+      width: auto;
+      cursor: pointer;
+      margin-left: 0.5em;
+      line-height: 16px;
+
+      :global {
+        span {
+          color: #00bed6 !important;
+          font-size: 16px;
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+
+          svg {
+            width: inherit;
+            height: inherit;
+          }
+        }
+      }
+    }
+
+    .deleteContainer {
+      width: auto;
+      cursor: pointer;
+
+      :global {
+        span {
+          color: #d63000 !important;
+          font-size: 14px;
+          height: 14px;
+          width: 14px;
+
+          svg {
+            width: inherit;
+            height: inherit;
+          }
+        }
+      }
+    }
+
+    :global {
+      .anticon svg {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .statusContainer {
+    flex: 1;
+    order: 1;
+    display: flex;
+
+    :global {
+      span {
+        padding: 0 8px;
+        border: 0.5px solid transparent;
+        border-radius: 4px;
+        font-size: 10px;
+      }
+
+      .item-status-success {
+        border-color: #00c073 !important;
+        color: #00c073 !important;
+      }
+
+      .item-status-primary {
+        border-color: #292d34 !important;
+        color: #292d34 !important;
+      }
+
+      .item-status-warning {
+        border-color: #faad14 !important;
+        color: #faad14 !important;
+      }
+
+      .item-status-error {
+        border-color: #f5222d !important;
+        color: #f5222d !important;
+      }
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  background: #f4f4f4 !important;
+  border: 1px dashed #cbd8e3 !important;
+  border-radius: 4px !important;
+  color: black !important;
+  box-shadow: unset !important;
+}
+
+.itemTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #1c1c1c;
+  @media screen and (max-width: 414px) {
+  font-size: 11px;
+  }
+  @media screen and (max-width: 285px) {
+    font-size: 9px;
+    font-weight: normal;
+  }
+}
+
+.itemDescription {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #cbd8e3;
+}

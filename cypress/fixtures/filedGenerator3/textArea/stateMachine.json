@@ -1,0 +1,101 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "stateMachineConfig": {
+    "id": "onboarding",
+    "initial": "ONE",
+    "context": {
+      "retries": 0,
+      "applicationStatus": "IN_PROGRESS",
+      "stagingState": "PENDING",
+      "currentStage": null,
+      "applicationFinalStatus": "IN_PROGRESS",
+      "onboardingStages": {
+        "ONE": {
+          "title": "مرحله اول",
+          "state": "EMPTY",
+          "isEnabled": true,
+          "order": 1,
+          "buttons": ["step", "next"]
+        },
+        "SELECTING": {
+          "buttons": ["exit", "confirm"]
+        },
+        "REVIEW": {
+          "buttons": ["step", "approve"]
+        },
+        "FINAL": {
+          "buttons": [""]
+        },
+        "errors": {
+          "description": null,
+          "items": []
+        }
+      }
+    },
+    "states": {
+      "ONE": {
+        "on": {
+          "FORWARD": [
+            {
+              "target": "REVIEW",
+              "cond": {
+                "type": "checkConditions",
+                "property": "REVIEW"
+              },
+              "actions": ["countRetries"]
+            },
+            {
+              "target": "PENDING"
+            }
+          ],
+          "SELECT": "SELECTING"
+        }
+      },
+      "FINAL": {
+        "type": "final"
+      },
+      "FAILURE": {
+        "on": {
+          "RETRY": {
+            "target": "ONE",
+            "actions": "countRetries"
+          }
+        }
+      },
+      "REVIEW": {
+        "on": {
+          "APPROVE": {
+            "target": "FINAL"
+          },
+          "SELECT": "SELECTING"
+        }
+      },
+      "SELECTING": {
+        "on": {
+          "SET_REVIEW": "REVIEW",
+          "SET_ONE": "ONE",
+          "FORWARD": "REVIEW"
+        }
+      },
+      "PENDING": {
+        "": [
+          {
+            "target": "FINAL",
+            "cond": "checkFinal"
+          }
+        ],
+        "*": "FAILURE"
+      }
+    },
+    "on": {
+      "FORWARD": {
+        "actions": "countRetries"
+      },
+      "UPDATE-XSTATE-CONTEXT": {
+        "actions": "updateContext",
+        "internal": false
+      }
+    }
+  }
+}

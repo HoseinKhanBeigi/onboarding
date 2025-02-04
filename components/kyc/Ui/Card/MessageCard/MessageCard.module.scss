@@ -1,0 +1,37 @@
+@import '../../../base';
+
+.card {
+  max-width: 440px;
+  width: 100%;
+  font-size: font(12);
+
+  &__content {
+    flex-direction: column;
+
+    @extend %centralize;
+
+    & > :not(:last-child) {
+      margin-bottom: space(24);
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    h2 {
+      font-size: font(14);
+      font-weight: bold;
+      margin-bottom: space(12);
+    }
+
+    p {
+      color: color(text-secondary);
+    }
+  }
+
+  &__image {
+    width: 4.8rem;
+
+    @extend %fix-Image-component;
+  }
+}

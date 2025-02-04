@@ -1,0 +1,87 @@
+@import './components/variables';
+
+.thanksText {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: $font-color;
+  padding-top: 20px;
+
+  span {
+    color: $primary;
+  }
+}
+
+.installApp {
+  font-size: 14px;
+  text-align: center;
+  color: $font-color;
+  padding: 20px 0;
+  max-width: 567px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.finalContainer {
+  width: 100%;
+
+  @extend .container;
+}
+
+.appContainer {
+  @extend .container;
+}
+
+.kianLogo {
+  padding-top: 4em;
+}
+
+.logoContainer {
+  margin: 10px 5px 0;
+  width: 182px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding-left: 15px;
+  }
+}
+
+.sibApp {
+  background: #fff;
+  color: #636363;
+
+  @extend .logoContainer;
+}
+
+.bazar {
+  background: #a0bd45;
+  color: $font-color;
+
+  @extend .logoContainer;
+}
+
+.googlePlay {
+  background: #303030;
+  color: $font-color;
+
+  @extend .logoContainer;
+}
+
+@media (max-width: 400px) {
+  .logoContainer {
+    width: 164px;
+  }
+}

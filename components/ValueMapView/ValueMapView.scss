@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: 53px;
+
+  .label {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    color: #7f909e;
+    width: 40%;
+    max-width: 40%;
+  }
+
+  .value {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    color: #121b26;
+    width: 60%;
+  }
+}

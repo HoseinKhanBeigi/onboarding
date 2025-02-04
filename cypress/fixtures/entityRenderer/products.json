@@ -1,0 +1,67 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "گروه اول",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "text",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "view",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}"
+        }
+      }
+    }
+  ]
+}

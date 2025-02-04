@@ -1,0 +1,283 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+/*
+ * Typography
+ * ========================================================================
+ */
+
+$font-family-base: iranyekan, sans-serif, 'Segoe UI', 'HelveticaNeue-Light';
+
+/*
+ * Layout
+ * ========================================================================
+ */
+
+$max-content-width: 1000px;
+
+/*
+ * Media queries breakpoints
+ * ========================================================================
+ */
+
+$screen-xs-min: 480px; /* Extra small screen / phone */
+$screen-sm-min: 768px; /* Small screen / tablet */
+$screen-md-min: 992px; /* Medium screen / desktop */
+$screen-lg-min: 1200px; /* Large screen / wide desktop */
+
+/*
+ * color
+ * ========================================================================
+ */
+
+$gradient-light: #b7bcc8;
+$gradient-dark: #7f8798;
+$disabled-primary: #c3b052;
+$secondary: #9a9fa9;
+$font-color: #1c1c1c;
+$light-font-color: #fff;
+$primary: #0089ff;
+$logo-shadow: rgba(57, 57, 57, 0.5);
+$disabled-font-color: #c2c2c2;
+$upload-button-outer-shadow: rgba(0, 0, 0, 0.5);
+$button-shadow: rgba(63, 63, 63, 0.5);
+$radio-group-color: #656565;
+$error: #ff2727;
+$warmGrey: #737373;
+$greyBrown: #5b5b5b;
+$primary-background: #fcfcfc;
+$input-border: #dadde1;
+$input-label: #7f909e;
+
+/*
+ * global styles
+ * =============================================
+*/
+:root {
+  --sidebar-bg-img-url-desktop: url('/static/images/Pattern.png'), linear-gradient(to bottom, #2a3b4d, #17222e) !important;
+  --sidebar-bg-img-url-mobile: '';
+  --sidebar-bg-color-mobile: #334357;
+  --sidebar-desc-bg-color: #121b26;
+  --sidebar-desc-color: #fff;
+  --form-bg-img-url-desktop: #fefefe;
+  --from-bg-img-url-mobile: #fefefe;
+  --from-bg-color: #fefefe;
+  --Button-primary-color: #40a9ff;
+  --button-primary-disable-color: rgba(24, 144, 255, 0.25);
+}
+
+/*
+ * mixins
+ * ========================================================================
+ */
+
+%font-family {
+  font-family: $font-family-base;
+}
+
+@mixin bordered-button($disabledColor, $disabledBackgroundColor) {
+  box-sizing: content-box;
+  padding: 3px 0;
+  font-size: 12px;
+
+  &:disabled {
+    background-color: $disabledBackgroundColor;
+    cursor: not-allowed !important;
+    pointer-events: none;
+
+    span {
+      color: $disabledColor;
+    }
+  }
+}
+
+@mixin borderless-button($disabledColor, $disabledBackgroundColor) {
+  padding: 4px 0;
+  border: none;
+
+  @include bordered-button($disabledColor, $disabledBackgroundColor);
+
+  &:hover {
+    border: none;
+  }
+
+  &:focus,
+  &:active {
+    border: none;
+  }
+}
+
+@mixin confirmation-notice-amount {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.27;
+  text-align: center;
+  color: $greyBrown;
+
+  @extend %font-family;
+}
+
+@mixin confirmation-notice-message {
+  font-size: 25px;
+  text-align: center;
+  line-height: 2.64;
+  color: #5b5b5b80;
+
+  @extend %font-family;
+}
+
+@mixin logo-type {
+  font-size: 48px;
+  font-weight: bold;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin success-message {
+  font-size: 39px;
+  font-weight: bold;
+  text-align: center;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin active-step-number {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+title {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: $primary;
+
+  @extend %font-family;
+}
+
+@mixin bold-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin message-details {
+  font-size: 18px;
+  text-align: center;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin next-steps-number {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin outline-button-label {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin button-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: $light-font-color;
+
+  @extend %font-family;
+}
+
+@mixin previous-steps {
+  font-size: 18px;
+  text-align: right;
+  color: $primary;
+
+  @extend %font-family;
+}
+
+@mixin light-text {
+  font-size: 18px;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin small-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  color: $primary;
+
+  @extend %font-family;
+}
+
+@mixin fields-label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin radio-group-label {
+  font-size: 14px;
+  text-align: right;
+  color: $radio-group-color;
+
+  @extend %font-family;
+}
+
+@mixin login-register-note {
+  font-size: 14px;
+  text-align: right;
+  color: $font-color;
+
+  @extend %font-family;
+}
+
+@mixin inputs-placeholder {
+  font-size: 14px;
+  text-align: right;
+  color: $disabled-font-color;
+
+  @extend %font-family;
+}
+
+%full-height {
+  height: 100vh !important;
+}
+
+@mixin absolute-position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}

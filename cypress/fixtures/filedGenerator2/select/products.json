@@ -1,0 +1,175 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "استان",
+                "type": "select",
+                "placeHolder": "لطفا استان محل سکونت خود را انتخاب کنید",
+                "validation": {},
+                "initialData": [
+                  {
+                    "id": 108,
+                    "label": "تهران"
+                  },
+                  {
+                    "id": 105,
+                    "label": "کرج"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "شهر",
+                "type": "select",
+                "placeHolder": "لطفا شهر محل سکونت خود را انتخاب کنید",
+                "validation": {},
+                "initialData": [
+                  {
+                    "field1_id": 105,
+                    "id": 273,
+                    "label": "اشتهارد"
+                  },
+                  {
+                    "field1_id": 105,
+                    "id": 274,
+                    "label": "ساوجبلاغ"
+                  },
+                  {
+                    "field1_id": 105,
+                    "id": 275,
+                    "label": "طالقان"
+                  },
+                  {
+                    "field1_id": 105,
+                    "id": 276,
+                    "label": "کرج"
+                  },
+                  {
+                    "field1_id": 105,
+                    "id": 277,
+                    "label": "نظرآباد"
+                  },
+                  {
+                    "field1_id": 108,
+                    "id": 299,
+                    "label": "اسلامشهر"
+                  },
+                  {
+                    "field1_id": 108,
+                    "id": 300,
+                    "label": "بهارستان"
+                  },
+                  {
+                    "field1_id": 108,
+                    "id": 301,
+                    "label": "پاکدشت"
+                  }
+                ],
+                "actions": {},
+                "itemsDependsOn": {
+                  "path": "field1_id",
+                  "match": "exact",
+                  "value": "group-one.field1"
+                }
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "select",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": { "required": true },
+                "actions": {},
+                "initialData": [
+                  {
+                    "id": 101,
+                    "label": "گزینه اول"
+                  },
+                  {
+                    "id": 102,
+                    "label": "گزینه دوم"
+                  },
+                  {
+                    "id": 103,
+                    "label": "گزینه سوم"
+                  },
+                  {
+                    "id": 104,
+                    "label": "گزینه چهارم"
+                  },
+                  {
+                    "id": 105,
+                    "label": "گزینه پنجم"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 3,
+              "entityType": "field",
+              "entity": {
+                "name": "field4",
+                "label": "فیلد چهارم",
+                "type": "select",
+                "placeHolder": "مقدار فیلد چهارم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "id": 101,
+                    "label": "گزینه اول"
+                  },
+                  {
+                    "id": 102,
+                    "label": "گزینه دوم"
+                  },
+                  {
+                    "id": 103,
+                    "label": "گزینه سوم"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}",
+          "field4": "${group-one.field4}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}",
+          "group-one.field4": "${field4}"
+        }
+      }
+    }
+  ]
+}

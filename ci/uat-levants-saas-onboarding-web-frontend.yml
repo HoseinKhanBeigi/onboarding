@@ -1,0 +1,40 @@
+projectKind: "front"
+envAsFile:
+  enabled: false
+  path: /usr/src/app/.env
+
+command: "npm"
+
+extraArg:
+  - "run"
+  - "start"
+
+metrics:
+  jmx:
+    enabled: false
+
+service:
+  port: 3000
+
+extraConfig:
+  BUILD_ENV: MT
+  DOMAINNAME: levants.io
+  AUTH_CLIENT_ID: onboarding-web
+  AUTH_BASEURL: https://mt.neshanid.io/auth/realms/KIAN/protocol/openid-connect
+  AUTH_API_BASEURL: https://mt.neshanid.io/auth/realms/KIAN/api
+  SERVER_ADDRESS: https://onboarding-web-backend.mt.levants.io/api
+  CONFIG_ADDRESS: https://onboarding-web-backend.mt.levants.io/api
+  FLOW_SERVER_ADDRESS: https://mt.levants.io/shiva-backend
+  FILE_SERVER_ADDRESS: https://mt.levants.io/glusterproxy/api
+  VIDEO_WIDTH_SIZE: 640
+  VIDEO_HEIGHT_SIZE: 480
+  VIDEO_FRAME_RATE: 24
+
+ingress:
+  hosts:
+    - domain: onboarding-web.mt.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(.*)

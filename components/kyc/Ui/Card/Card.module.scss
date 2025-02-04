@@ -1,0 +1,23 @@
+@import '../../base';
+
+.card {
+  background-color: color(background-primary);
+  box-shadow: 0 0.8rem 2.4rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: radius(8);
+  overflow: hidden;
+  position: relative;
+
+  &__title {
+    text-align: right;
+    padding: space(12) space(16);
+    border-bottom: 1px solid color(border);
+    font-size: font(14);
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: space(16);
+
+    @extend %full-of-Parent;
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "preCondition": {
+    "product": "PRODUCT-NAME",
+    "other": false,
+    "nationalCode": "0015509184",
+    "registrationNumber": null,
+    "relationshipType": null
+  },
+  "applicationInfo": {
+    "subtitle": null,
+    "applicationID": "5f54b1a49fdddf5bfe80a968",
+    "applicationStatus": "IN_PROGRESS",
+    "stagingState": "DATA_ENTRY",
+    "stagingDescription": "",
+    "currentStage": "ONE",
+    "thirdParty": false,
+    "applicationFinalStatus": "IN_PROGRESS",
+    "products": ["PRODUCT-NAME"]
+  },
+  "stages": [
+    {
+      "@name": "Stage1",
+      "stageType": "ONE",
+      "order": 1,
+      "title": "مرحله اول",
+      "state": "FILLED",
+      "isEnabled": true,
+      "data": {
+        "field": "لورم ایپسوم یک متن تستی است"
+      }
+    },
+    {
+      "@name": "Stage2",
+      "stageType": "TWO",
+      "order": 2,
+      "title": "مرحله دوم",
+      "state": "EMPTY",
+      "isEnabled": true,
+      "data": {
+        "field": ""
+      }
+    },
+    {
+      "@name": "Stage3",
+      "stageType": "THREE",
+      "order": 3,
+      "title": "مرحله سوم",
+      "state": "FILLED",
+      "isEnabled": true,
+      "data": {
+        "field": "finished"
+      }
+    },
+    {
+      "@name": "Stage4",
+      "stageType": "FOUR",
+      "order": 4,
+      "title": "مرحله چهارم",
+      "state": "LOCKED",
+      "isEnabled": true,
+      "data": {
+        "field": "locked"
+      }
+    },
+    {
+      "@name": "Stage5",
+      "stageType": "FIVE",
+      "order": 5,
+      "title": "مرحله پنجم",
+      "state": "EMPTY",
+      "isEnabled": true,
+      "data": {
+        "field": ""
+      }
+    }
+  ],
+  "errors": {
+    "description": "dddddd",
+    "items": [
+      {
+        "stage": "FIVE",
+        "title": "عنوان خطا",
+        "description": "یه مشکلی در این مرحله داریم! اوه آره :)",
+        "order": 0,
+        "state": "EMPTY"
+      }
+    ]
+  }
+}

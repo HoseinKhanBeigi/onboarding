@@ -1,0 +1,57 @@
+
+.demo{
+  
+  
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    // background: rgb(153, 228, 199);
+--background-primary: #fff;
+--background-secondary: #f9f9fb;
+--background-tertiary: #fff;
+--background-toc-active: #ebeaea;
+--background-mark-yellow: rgba(199,183,0,.4);
+--background-mark-green: rgba(0,208,97,.4);
+--background-information: rgba(0,133,242,.1);
+--background-warning: rgba(255,42,81,.1);
+--background-critical: rgba(211,0,56,.1);
+--background-success: rgba(0,121,54,.1);
+}
+
+.notecard {
+    width: 50%;
+  
+    --note-background: rgba(0,133,242,.1);
+    --note-theme: var(--icon-information);
+    background-color: rgba(0,133,242,.1);
+    background-color: var(--note-background);
+    border: 1px solid #cdcdcd;
+
+    border-radius: 0.25rem;
+    border-radius: var(--elem-radius);
+    box-shadow: var(--shadow-01);
+    margin: 1rem 0;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+}
+
+.notecard:before {
+    background-color: var(--note-theme);
+    content: "";
+    display: block;
+    height: 1rem;
+    left: 1rem;
+    -webkit-mask-image: url('https://developer.mozilla.org/static/media/note-info.0eafb6e7738509bce66e.svg');
+    mask-image: url('https://developer.mozilla.org/static/media/note-info.0eafb6e7738509bce66e.svg');
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    position: absolute;
+    top: 1.5rem;
+    width: 1rem;
+}

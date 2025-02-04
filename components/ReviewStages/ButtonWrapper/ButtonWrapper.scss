@@ -1,0 +1,109 @@
+@import '../../variables.scss';
+
+.titleWrapper {
+  img {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+}
+
+.mobileButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    position: unset;
+    bottom: unset;
+    padding: 24px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    padding: 0 15px;
+    z-index: 1;
+  }
+}
+
+.checkInfoBtn {
+  margin-bottom: 12px;
+  border: none !important;
+
+  @include borderless-button(var(--Button-primary-color) !important, var(--button-primary-disable-color) !important);
+
+  &:disabled {
+    border: none;
+  }
+}
+
+.arrowDisableIcon {
+  margin-right: -7px !important;
+  color: #1890ff;
+}
+
+.arrowEnableIcon {
+  margin-right: -7px !important;
+  color: white;
+
+  svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  span {
+    margin-top: 1px !important;
+  }
+}
+
+:global {
+  .anticon svg {
+    margin: 0 7px -1px 0 !important;
+  }
+
+  .ant-layout-sider {
+    .arrow-button {
+      display: none;
+    }
+
+    .render-button {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+
+    &.ant-layout-sider-collapsed {
+      @media screen and (max-width: 1023px) {
+        .arrow-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 32px;
+          height: 32px;
+          padding: 12px 13px 12px 14px;
+          border-radius: 4px;
+          background-color: var(--Button-primary-color);
+          margin-right: -7px;
+          margin-top: 24px;
+
+          &.disabled {
+            background-color: var(--button-primary-disable-color);
+          }
+        }
+      }
+
+      .render-button {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

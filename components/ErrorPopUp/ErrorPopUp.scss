@@ -1,0 +1,56 @@
+@import '../variables';
+
+.errorMessage {
+  background-color: #ffffff36;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+
+  .alertTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4343;
+    letter-spacing: -0.9px;
+    padding: 10px 0;
+  }
+
+  .alertDesc {
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+.modalButton {
+  height: 45px;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 0 rgba(128, 128, 128, 0.5);
+  color: #636363;
+  margin-bottom: 10px;
+}
+
+:global {
+  .ant-modal-content {
+    box-shadow: 9px 12px 21px 0 rgba(96, 96, 96, 0.5) !important;
+    background-image: radial-gradient(circle at 53% 44%, #b7bcc8, #7f8798 120%) !important;
+  }
+
+  .ant-modal-header {
+    background: #fff0 !important;
+    border-bottom-style: hidden;
+    padding: 16px 24px 0;
+  }
+
+  .ant-modal-title {
+    color: white !important;
+  }
+
+  .ant-modal-footer {
+    border-top-style: hidden;
+    padding: 0 24px 10px;
+  }
+
+  .ant-modal-body {
+    padding-top: 6px;
+  }
+}

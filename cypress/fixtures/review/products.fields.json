@@ -1,0 +1,219 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "text",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "checkbox",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "locations",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "street": "24 متری",
+                    "addressType": "LIVING"
+                  },
+                  {
+                    "street": "بزرگمهر",
+                    "addressType": "OTHER"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 3,
+              "entityType": "field",
+              "entity": {
+                "name": "field4",
+                "label": "فیلد چهارم",
+                "type": "schedule",
+                "placeHolder": "مقدار فیلد چهارم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "fromTimeEpoch": 1600255255,
+                    "toTimeEpoch": 1800855255,
+                    "capacity": 2,
+                    "id": 1
+                  },
+                  {
+                    "fromTimeEpoch": 1600255255,
+                    "toTimeEpoch": 1700856355,
+                    "capacity": 4,
+                    "id": 2
+                  }
+                ]
+              }
+            },
+            {
+              "order": 4,
+              "entityType": "field",
+              "entity": {
+                "name": "field5",
+                "label": "فیلد پنجم",
+                "type": "select",
+                "placeHolder": "مقدار فیلد پنجم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "id": 101,
+                    "label": "گزینه اول"
+                  },
+                  {
+                    "id": 102,
+                    "label": "گزینه دوم"
+                  },
+                  {
+                    "id": 103,
+                    "label": "گزینه سوم"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 5,
+              "entityType": "field",
+              "entity": {
+                "name": "field6",
+                "label": "فیلد ششم",
+                "type": "slider",
+                "placeHolder": "مقدار فیلد ششم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "value": 6,
+                "step": 10,
+                "steps": [
+                  {
+                    "value": 0,
+                    "label": "صفر"
+                  },
+                  {
+                    "value": 2,
+                    "label": "دو"
+                  },
+                  {
+                    "value": 4,
+                    "label": "چهار"
+                  },
+                  {
+                    "value": 6,
+                    "label": "شش"
+                  },
+                  {
+                    "value": 8,
+                    "label": "هشت"
+                  },
+                  {
+                    "value": 10,
+                    "label": "ده"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 6,
+              "entityType": "field",
+              "entity": {
+                "name": "field7",
+                "label": "فیلد هفتم",
+                "type": "number",
+                "placeHolder": "مقدار فیلد هفتم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 7,
+              "entityType": "field",
+              "entity": {
+                "name": "field8",
+                "label": "فیلد هشتم",
+                "type": "tel",
+                "placeHolder": "مقدار فیلد هشتم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 8,
+              "entityType": "field",
+              "entity": {
+                "name": "field9",
+                "label": "فیلد نهم",
+                "type": "text-area",
+                "placeHolder": "مقدار فیلد نهم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}",
+          "field4": "${group-one.field4}",
+          "field5": "${group-one.field5}",
+          "field6": "${group-one.field6}",
+          "field7": "${group-one.field7}",
+          "field8": "${group-one.field8}",
+          "field9": "${group-one.field9}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}",
+          "group-one.field4": "${field4}",
+          "group-one.field5": "${field5}",
+          "group-one.field6": "${field6}",
+          "group-one.field7": "${field7}",
+          "group-one.field8": "${field8}",
+          "group-one.field9": "${field9}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.group {
+  width: 420px;
+
+  @media screen and (min-width: 1024px) {
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(5.2px);
+    backdrop-filter: blur(5.2px);
+    background-color: #334357;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-top: 32px !important;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .group {
+    margin: 0 auto 2em auto;
+  }
+}
+
+.stepContainer {
+  overflow: auto;
+  z-index: 999;
+  background:
+    linear-gradient(var(--sidebar-bg-color-mobile) 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), var(--sidebar-bg-color-mobile) 70%) 0 100%,
+    radial-gradient(50% 0, farthest-side, #283546, rgba(0, 0, 0, 0)),
+    radial-gradient(50% 100%, farthest-side, #283546, rgba(0, 0, 0, 0)) 0 100%;
+  background:
+    linear-gradient(var(--sidebar-bg-color-mobile) 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), var(--sidebar-bg-color-mobile) 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, #283546, rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 50% 100%, #283546, rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+
+  @media screen and (min-width: 1024px) {
+    background:
+      linear-gradient(#334357 30%, rgba(255, 255, 255, 0)),
+      linear-gradient(rgba(255, 255, 255, 0), #334357 70%) 0 100%,
+      radial-gradient(50% 0, farthest-side, #283546, rgba(0, 0, 0, 0)),
+      radial-gradient(50% 100%, farthest-side, #283546, rgba(0, 0, 0, 0)) 0 100%;
+    background:
+      linear-gradient(#334357 30%, rgba(255, 255, 255, 0)),
+      linear-gradient(rgba(255, 255, 255, 0), #334357 70%) 0 100%,
+      radial-gradient(farthest-side at 50% 0, #283546, rgba(0, 0, 0, 0)),
+      radial-gradient(farthest-side at 50% 100%, #283546, rgba(0, 0, 0, 0)) 0 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 24px 24px 0 24px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 100% !important;
+    overflow-y: scroll;
+    padding: 0 15px;
+  }
+}

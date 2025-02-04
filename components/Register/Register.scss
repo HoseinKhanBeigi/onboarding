@@ -1,0 +1,150 @@
+@import '../variables';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100% !important;
+
+  .container {
+    width: 100%;
+    overflow: hidden;
+
+    .content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }
+  }
+}
+
+.groupsContainer {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  justify-content: space-around;
+  padding: 5em 0;
+
+  @media (max-width: 1024px) {
+    width: 380px;
+    padding: 5em 16px 0 16px;
+  }
+
+  :global {
+    .ant-alert {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .groupsContainer {
+    width: 100%;
+  }
+}
+
+.layoutFooter {
+  background-color: var(--sidebar-desc-bg-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  span {
+    color: var(--sidebar-desc-color);
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.45;
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin: 0 29px 18px 29px;
+    }
+  }
+}
+
+.logo {
+  height: 27px;
+  max-width: 105.8px;
+  margin: 13px 0 8px 0;
+}
+
+.layout {
+  width: 100%;
+  position: relative !important;
+  z-index: 1 !important;
+
+  .layoutContainer {
+    flex-flow: column;
+    justify-content: space-between !important;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 48px 0 0;
+      z-index: 1 !important;
+    }
+  }
+}
+
+.closeButton {
+  width: 160px;
+}
+
+.modal {
+  width: auto !important;
+
+  .messageBody {
+    width: auto;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #292d34;
+    background: #fefefe;
+    border: 1px solid #cbd8e3;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    margin-top: 8px;
+    padding: 16px;
+    white-space: pre-wrap;
+
+    /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;
+
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+
+    /* Opera 7 */
+    word-wrap: break-word;
+  }
+
+  :global {
+    .ant-modal-body {
+      background: #f8f9fd;
+      text-align: right;
+      border-radius: 8px !important;
+
+      form {
+        padding: 0;
+      }
+    }
+
+    .ant-modal-footer {
+      text-align: left !important;
+      flex-grow: 1;
+      padding: 16px;
+    }
+  }
+}

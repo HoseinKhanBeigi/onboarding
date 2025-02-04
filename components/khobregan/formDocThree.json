@@ -1,0 +1,228 @@
+{
+  "names": "form darkhast etebar moshtarian haghighi",
+  "key": 1,
+  "logos": [
+    "./assets/115783931601b5c.jpg",
+    "./assets/115783931601b5c.jpg",
+    "./assets/115783931601b5c.jpg"
+  ],
+  "title": "فرم درخواست اعتبار مشتریان حقیقی\n",
+  "pages":[
+    {
+      "id": 1,
+      "entities": [
+        {
+          "title": "مدیریت محترم شرکت کارگزاری خبرگان سهام\n",
+          "paragraphes": [
+            {
+              "inputes": [
+                {
+                  "text": "اینجانب ",
+                  "input": {
+                    "inputType": "text",
+                    "name": "name",
+                    "value": "کیان"
+                  }
+                },
+                {
+                  "text": "با کد بورسی",
+                  "input": {
+                    "inputType": "number",
+                    "name": "codeBoorsi",
+                    "value": "123456"
+                  }
+                },
+                {
+                  "text": "از مشتریان آن شرکت کارگزاری با ارزش پرتفوی  ",
+                  "input": {
+                    "inputType": "number",
+                    "name": "arzeshPortfolio",
+                    "value": 106105
+                  }
+                },
+                {
+                  "text": "ریال بدینوسیله درخواست اخذ ",
+                  "input": {
+                    "inputType": "number",
+                    "name": "vam",
+                    "value": "2000000"
+                  }
+                },
+                {
+                  "text": "ریال اعتبار خرید سهام در بورس اوراق بهادار و فرابورس ایران را به حضور اعلام می دارم.\n",
+                  "input": {}
+                }
+              ]
+            },
+            {
+              "inputes": [
+                {
+                  "sign": "تاریخ و امضاء\n",
+                  "input": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "",
+          "table": [
+            [
+              {
+                "inputes": [
+                  {
+                    "text": "نام واحد",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "inputes": [
+                  {
+                    "text": "شرح",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "inputes": [
+                  {
+                    "text": "امضاء",
+                    "input": {}
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "inputes": [
+                  {
+                    "text": "واحد پذیرش",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "type": "checkbox",
+                "inputes": [
+                  {
+                    "text": "نقص مدرک دارد",
+                    "input": {}
+                  },
+                  {
+                    "text": "مدارک تکمیل است",
+                    "input": {}
+                  },
+                  {
+                    "tableBlank": [
+                      {
+                        "textBlank": "نقض مدارک در",
+                        "input": {
+                          "inputType": "number",
+                          "name": "rooz",
+                          "value": "5"
+                        }
+                      },
+                      {
+                        "textBlank": " روز برطرف می گردد",
+                        "input": {}
+                      }
+                    ],
+                    "text": "",
+                    "input": {}
+                  }
+
+                ]
+              },
+              {
+                "inputes": [
+                  {
+                    "text": "",
+                    "input": {}
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "inputes": [
+                  {
+                    "text": "واحد مالی",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "type": "checkbox",
+                "inputes": [
+                  {
+                    "text": "اعطای اعتبار خرید بلامانع است",
+                    "input": {}
+                  },
+                  {
+                    "text": "اعطای اعتبار خرید از نظر این واحد وجود ندارد",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "inputes": [
+                  {
+                    "text": "",
+                    "input": {}
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "inputes": [
+                  {
+                    "text": "مدیریت",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "type": "checkbox",
+                "inputes": [
+                  {
+                    "tableBlank": [
+                      {
+                        "textBlank": "به مبلغ",
+                        "input": {
+                          "inputType": "number",
+                          "name": "price",
+                          "value": "5000000"
+                        }
+                      },
+                      {
+                        "textBlank": " ریال اعتبار تخصیص داده شود\n",
+                        "input": {}
+                      }
+                    ],
+                    "text": "",
+                    "input": {}
+                  },
+                  {
+                    "text": "امکان تخصیص اعتبار وجود ندارد:",
+                    "input": {}
+                  }
+                ]
+              },
+              {
+                "inputes": [
+                  {
+                    "text": "",
+                    "input": {}
+                  }
+                ]
+              }
+            ]
+          ],
+          "paragraphes": []
+        }
+      ]
+    }
+  ]
+}

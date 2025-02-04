@@ -1,0 +1,184 @@
+@import '../variables';
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  background: #f8f9fd;
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    & > span {
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    .box {
+      width: calc(100% - 32px);
+      max-width: 348px;
+      display: flex;
+      min-height: 200px;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: auto;
+
+      .row {
+        margin-bottom: 36px;
+
+        .formItem {
+          margin-bottom: 20px !important;
+        }
+
+        &:last-of-type {
+          margin-bottom: 19px !important;
+        }
+      }
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  :global {
+    button {
+      width: calc(50% - 16px) !important;
+      margin: 0;
+    }
+  }
+
+  & > * {
+    margin-bottom: 12px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.errorText {
+  font-size: 10px;
+  text-align: justify;
+  color: #f5222d !important;
+  margin-top: 0;
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.submit {
+  background-color: var(--Button-primary-color) !important;
+  border: var(--Button-primary-color) !important;
+  margin-bottom: 8px;
+
+  span {
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+//start dorsa application
+.startApplicationContainer {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 1164px) {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.modal {
+  :global {
+    .ant-modal-body {
+      p {
+        text-align: center;
+      }
+    }
+
+    .ant-modal-footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+
+.sideLayout {
+  width: 496px;
+  background-color: white;
+  position: relative;
+
+  @media screen and (max-width: 1164px) {
+    width: 100%;
+    min-width: unset;
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.contentLayout {
+  display: block;
+  width: calc(100% - 496px);
+  height: 100vh;
+
+  @media screen and (max-width: 1164px) {
+    display: none;
+  }
+}
+
+.backgroundImgWrapper {
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: #121b26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+
+  @media screen and (min-width: 1164px) {
+    position: absolute;
+    bottom: 0;
+  }
+
+  img {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 12px;
+    color: #6f6f6f;
+    text-align: center;
+    line-height: 19px;
+  }
+}

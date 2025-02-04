@@ -1,0 +1,41 @@
+@import '../../base';
+
+.popup {
+  opacity: 1;
+  will-change: opacity, transform;
+  z-index: 200;
+  position: fixed;
+  width: calc(100% - 3.2rem);
+  flex-direction: column;
+
+  @extend %absolute-center;
+  @extend %centralize;
+}
+
+.slideIn {
+  animation: slidein 0.3s $ant-cubic-bezier;
+
+  @keyframes slidein {
+    from {
+      transform: translateX(-50%) translateY(calc(-50% - 100px));
+      opacity: 0;
+    }
+  }
+}
+
+.slideOut {
+  animation: slideout 0.3s $ant-cubic-bezier forwards;
+
+  @keyframes slideout {
+    to {
+      transform: translateX(-50%) translateY(calc(-50% - 100px));
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .desktop {
+    position: absolute;
+  }
+}

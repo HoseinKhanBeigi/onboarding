@@ -1,0 +1,43 @@
+@import '../../base';
+
+.wrapper {
+  width: 100%;
+  height: 0;
+  padding-top: 125%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @extend %full-of-Parent;
+}
+
+.controls {
+  width: 100%;
+  flex-basis: 8rem;
+  flex-shrink: 0;
+
+  @extend %centralize;
+}
+
+.webcam {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  border-radius: 10px;
+
+  @extend %full-of-Parent;
+
+  @include safariOnly() {
+    border-radius: radius(8) radius(8) 0 0;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
+}

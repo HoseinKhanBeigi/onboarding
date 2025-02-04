@@ -1,0 +1,65 @@
+@import '../../components/variables';
+
+.Container {
+  color: $font-color;
+  max-width: 376px;
+  padding: 16px;
+  border-radius: 8px;
+  border-color: #d9d9d9;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04);
+  background-color: #fefefe;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.optionsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  width: auto;
+  padding: 8px 5px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: right;
+  color: rgba(21, 53, 78, 0.55);
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  img {
+    padding: 0 0 5px 6px;
+    width: auto !important;
+    border: unset !important;
+  }
+}
+
+.optionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.descContainer {
+  background-color: #f0f2f5;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+  height: 178px;
+  transition: height 0.8s ease;
+}
+
+.descContainer.show {
+  height: 600px; /* Adjust according to your content size */
+  // transition: height 0.3s ease;
+}
+

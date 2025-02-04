@@ -1,0 +1,43 @@
+{
+  "preCondition": {
+    "product": "OTP",
+    "other": false,
+    "nationalCode": "0137574071",
+    "registrationNumber": null,
+    "relationshipType": null
+  },
+  "applicationInfo": {
+    "subtitle": "",
+    "applicationID": "5f631d7a24800821bb7f6a68",
+    "applicationStatus": "IN_PROGRESS",
+    "stagingState": "NEW",
+    "stagingDescription": "",
+    "currentStage": "OTPStage",
+    "thirdParty": false,
+    "applicationFinalStatus": "IN_PROGRESS",
+    "products": [
+      "OTP"
+    ]
+  },
+  "stages": [
+    {
+      "@name": "StageDataDTO",
+      "stageType": "OTPStage",
+      "order": 1,
+      "title": "مشخصات فردی",
+      "state": "EMPTY",
+      "isEnabled": true,
+      "data": {
+        "firstName": null,
+        "lastName": null,
+        "nationalCode": "0137574071",
+        "mobilePhone": "09130000001",
+        "birthDate": null
+      }
+    }
+  ],
+  "errors": {
+    "description": null,
+    "items": []
+  }
+}

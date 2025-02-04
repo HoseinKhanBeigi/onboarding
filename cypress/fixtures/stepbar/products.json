@@ -1,0 +1,177 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field",
+                "label": "فیلد",
+                "type": "text",
+                "placeHolder": "مقدار را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field": "${group-one.field}"
+        },
+        "toStore": {
+          "group-one.field": "${field}"
+        }
+      }
+    },
+    {
+      "name": "TWO",
+      "label": "مرحله دوم",
+      "groups": [
+        {
+          "name": "group-two",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field",
+                "label": "فیلد",
+                "type": "text",
+                "placeHolder": "مقدار را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field": "${group-two.field}"
+        },
+        "toStore": {
+          "group-two.field": "${field}"
+        }
+      }
+    },
+    {
+      "name": "THREE",
+      "label": "مرحله سوم",
+      "groups": [
+        {
+          "name": "group-three",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field",
+                "label": "فیلد",
+                "type": "text",
+                "placeHolder": "مقدار را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field": "${group-three.field}"
+        },
+        "toStore": {
+          "group-three.field": "${field}"
+        }
+      }
+    },
+    {
+      "name": "FOUR",
+      "label": "مرحله چهارم",
+      "groups": [
+        {
+          "name": "group-four",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field",
+                "label": "فیلد",
+                "type": "text",
+                "placeHolder": "مقدار را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field": "${group-four.field}"
+        },
+        "toStore": {
+          "group-four.field": "${field}"
+        }
+      }
+    },
+    {
+      "name": "FIVE",
+      "label": "مرحله پنجم",
+      "groups": [
+        {
+          "name": "group-five",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field",
+                "label": "فیلد",
+                "type": "text",
+                "placeHolder": "مقدار را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field": "${group-five.field}"
+        },
+        "toStore": {
+          "group-five.field": "${field}"
+        }
+      }
+    }
+  ]
+}

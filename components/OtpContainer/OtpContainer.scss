@@ -1,0 +1,82 @@
+.otpContainer {
+  button {
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 3em;
+  }
+}
+
+.otpInputContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.otpInput {
+  width: 100% !important;
+  height: 40px !important;
+  max-width: 40px;
+  margin: 0 4px !important;
+  border-radius: 4px !important;
+  border: 2px solid var(--Button-primary-color) !important;
+  text-align: center;
+}
+
+.otpForm {
+  display: flex;
+  flex-flow: column;
+}
+
+.otpTimerWrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #7f909e;
+  margin-top: 8px;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+.otpResendWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+
+  button {
+    font-size: 12px;
+    text-align: center;
+    color: #1890ff;
+    border: unset;
+    height: unset;
+    width: unset;
+  }
+}
+
+.esignBtn {
+  width: 100%;
+  height: 40px;
+  margin-top: 56px;
+  background-color: var(--Button-primary-color);
+  border: var(--Button-primary-color);
+
+  span {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.58;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: var(--Button-primary-color);
+    border: var(--Button-primary-color);
+  }
+
+  &:focus {
+    background-color: var(--Button-primary-color);
+    border: var(--Button-primary-color);
+  }
+}

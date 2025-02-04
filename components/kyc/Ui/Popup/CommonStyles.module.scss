@@ -1,0 +1,41 @@
+@import '../../base';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 18px;
+
+  & button {
+    align-self: flex-start;
+  }
+
+  & p {
+    color: color(text-secondary-darker);
+    line-height: space(24);
+    margin-bottom: space(24);
+  }
+
+  & h3 {
+    position: relative;
+    font-size: font(14);
+    font-weight: bold;
+    margin-bottom: space(6);
+
+    & svg {
+      position: absolute;
+      font-size: font(18);
+      margin-left: space(12);
+      color: color(danger);
+    }
+  }
+}
+
+.wrapper {
+  max-width: 668px;
+
+  @include onBetween($tablet-small) {
+    max-width: 74vmin;
+  }
+}

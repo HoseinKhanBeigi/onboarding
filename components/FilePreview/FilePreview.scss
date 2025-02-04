@@ -1,0 +1,104 @@
+@import '../variables.scss';
+
+.errorText {
+  color: red !important;
+  font-size: 10px;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-flow: column;
+
+  span {
+    font-size: 12px;
+    color: $primary !important;
+    margin-top: 10px;
+  }
+}
+
+.uploadIcon {
+  color: #7f909e !important;
+
+  svg {
+    width: 20px !important;
+    height: 20px !important;
+    color: #7f909e !important;
+  }
+}
+
+.uploadAgain {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  span {
+    font-size: 12px;
+    margin-right: 8px;
+    color: #1890ff !important;
+  }
+
+  span svg {
+    color: #1890ff !important;
+    margin: 0 !important;
+  }
+}
+
+.syncUpload {
+  margin-top: 4px;
+
+  svg {
+    width: 12px;
+    height: 13px;
+  }
+
+  path {
+    color: #1890ff !important;
+  }
+}
+
+.documentImageWrapper {
+  position: relative;
+}
+
+.documentImage {
+  width: 100%;
+}
+
+.approvedCheck {
+  position: absolute;
+  top: calc(50% - 9px);
+  right: calc(50% - 9px);
+  width: 18px !important;
+  height: 18px !important;
+
+  svg {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+
+    path {
+      color: #00c073 !important;
+    }
+  }
+}
+
+.filePreviewContainer {
+  width: 100%;
+
+  div {
+    width: 100%;
+  }
+}
+
+.pdfNameWrapper {
+  flex: 1 1 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.pdfName {
+  white-space: nowrap;
+  width: 100%;
+}

@@ -1,0 +1,3 @@
+ci_access:
+  projects:
+    - id: https://gitlab.kian.digital/levant/front/onboarding-web-frontend

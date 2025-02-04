@@ -1,0 +1,122 @@
+projectKind: "front"
+envAsFile:
+  enabled: false
+  path: /usr/src/app/.env
+
+command: "npm"
+
+extraArg:
+  - "run"
+  - "start"
+
+metrics:
+  jmx:
+    enabled: false
+
+service:
+  port: 3000
+
+extraConfig:
+  BUILD_ENV: SAAS
+  DOMAINNAME: levants.io
+  AUTH_CLIENT_ID: onboarding-web
+  AUTH_BASEURL: https://neshanid.io/auth/realms/master/protocol/openid-connect
+  AUTH_API_BASEURL: https://neshanid.io/auth/realms/KIAN/api
+  SERVER_ADDRESS: https://api.levants.io/usermgmt
+  CONFIG_ADDRESS: https://api.levants.io/onboarding-wrapper/api
+  FLOW_SERVER_ADDRESS: https://api.levants.io/shiva-backend
+  FILE_SERVER_ADDRESS: https://api.levants.io/glusterproxy/api
+  VIDEO_WIDTH_SIZE: 640
+  VIDEO_HEIGHT_SIZE: 480
+  VIDEO_FRAME_RATE: 24
+
+ingress:
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+  hosts:
+    - domain: reg.demo.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/oil-person.*)
+        - /?(onboarding/demo-person.*)
+        - /?(onboarding/personal-loan.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/oil-person.*)
+        - /?(auth/onboarding/demo-person.*)
+        - /?(auth/onboarding/personal-loan.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)
+    - domain: reg.khobregan.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/kbr-sejam.*)
+        - /?(onboarding/kbr-brokerage.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/kbr-sejam.*)
+        - /?(auth/onboarding/kbr-brokerage.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)
+    - domain: reg.oil.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/oil-person.*)
+        - /?(onboarding/personal-loan.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/oil-person.*)
+        - /?(auth/onboarding/personal-loan.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)
+    - domain: reg.demo.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/demo-kyc.*)
+        - /?(onboarding/demo-brokerage.*)
+        - /?(onboarding/demo-kyb.*)
+        - /?(onboarding/demo-personal-loan.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/demo-kyc.*)
+        - /?(auth/onboarding/demo-brokerage.*)
+        - /?(auth/onboarding/demo-kyb.*)
+        - /?(auth/onboarding/demo-personal-loan.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)
+    - domain: reg.levant.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/levant-kyc.*)
+        - /?(onboarding/levant-brokerage.*)
+        - /?(onboarding/levant-kyb.*)
+        - /?(onboarding/levant-personal-loan.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/levant-kyc.*)
+        - /?(auth/onboarding/levant-brokerage.*)
+        - /?(auth/onboarding/levant-kyb.*)
+        - /?(auth/onboarding/levant-personal-loan.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)
+    - domain: campaign.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(onboarding/levant-competition.*)
+        - /?(auth/callback.*)
+        - /?(auth/onboarding/levant-competition.*)
+        - /?(_next/.*)
+        - /?(api/.*)
+        - /?(static/.*)

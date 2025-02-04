@@ -1,0 +1,57 @@
+@import '../../base';
+
+.capture {
+  position: relative;
+  display: inline-flex;
+  color: #334357 !important;
+
+  & > svg {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 130%;
+    height: 130%;
+    z-index: 1;
+
+    @extend %absolute-center;
+  }
+
+  &__button {
+    border-radius: radius('rounded') !important;
+    transition: background-color 0.3s $ant-cubic-bezier;
+    width: 48px !important;
+    height: 48px !important;
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+
+    @extend %centralize;
+
+    &_video {
+      width: 4.2rem !important;
+      height: 4.2rem !important;
+      padding: 0 !important;
+
+      span {
+        color: #334357 !important;
+      }
+    }
+
+    & svg {
+      font-size: font(22);
+      width: 20px !important;
+      height: 20px !important;
+      margin: 0 0 -1px !important;
+
+      @extend %centralize;
+    }
+  }
+}
+
+.timer {
+  & circle {
+    @keyframes timer {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+}

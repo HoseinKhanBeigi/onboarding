@@ -1,0 +1,24 @@
+:global {
+  .ant-alert {
+    margin-bottom: 10px;
+    width: 420px;
+
+    .ant-alert-icon {
+      right: 24px;
+      left: auto;
+    }
+
+    .ant-alert-close-icon {
+      right: auto;
+      left: 8px;
+    }
+
+    .ant-alert-message {
+      margin-right: 24px !important;
+    }
+
+    .ant-alert-description {
+      margin-right: 24px;
+    }
+  }
+}

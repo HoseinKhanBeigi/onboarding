@@ -1,0 +1,14 @@
+{
+  "needsUserRegistration": false,
+  "applications": [
+    {
+      "productType": "OTP TEST",
+      "productName": "تست OTP",
+      "stagingState": "DATA_ENTRY",
+      "applicationID": "5f54b1a49fdddf5bfe80a968",
+      "cardGroup": "NONE",
+      "stagingDescription": ""
+    }
+  ],
+  "isImportedLead": false
+}

@@ -1,0 +1,61 @@
+@import '../../variables';
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  :global {
+    button {
+      width: calc(50% - 16px);
+      margin: 0;
+    }
+
+    .ant-btn.ant-btn-loading {
+      padding: 3px 0 !important;
+    }
+  }
+
+  & > * {
+    margin-bottom: 12px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+:global {
+  .ant-alert-message {
+    margin-right: -14px !important;
+  }
+
+  .ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) .anticon:not(:last-child) {
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  .buttonContainer {
+    width: 100%;
+    margin: 0 auto 2em auto;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.error {
+  margin-top: 0.5em;
+  color: red;
+  width: 350px;
+  text-align: center;
+}

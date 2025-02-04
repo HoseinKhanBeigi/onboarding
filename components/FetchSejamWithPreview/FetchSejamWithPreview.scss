@@ -1,0 +1,228 @@
+@import '../variables.scss';
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 352px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #e4e4e4;
+  background: var(--form-bg-img-url-desktop);
+}
+
+.sendOtpButton {
+  width: 100%;
+  background-color: var(--Button-primary-color);
+  border: var(--Button-primary-color);
+
+  &:hover {
+    background-color: var(--Button-primary-color);
+    border: var(--Button-primary-color);
+  }
+
+  &:focus {
+    background-color: var(--Button-primary-color);
+    border: var(--Button-primary-color);
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 12px;
+    color: #fefefe;
+  }
+}
+
+.rejectButton {
+  width: 100%;
+  color: var(--Button-primary-color);
+  border: 1px solid var(--Button-primary-color);
+  background: transparent;
+  margin-bottom: 4px;
+
+  &:hover {
+    color: var(--Button-primary-color);
+    border: 1px solid var(--Button-primary-color);
+    background: transparent;
+  }
+
+  &:focus {
+    color: var(--Button-primary-color);
+    border: 1px solid var(--Button-primary-color);
+    background: transparent;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--Button-primary-color);
+  }
+}
+
+.imageWrapper {
+  width: 64px;
+  height: 64px;
+  margin-top: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mainDescription {
+  font-size: 12px;
+  color: #7f909e;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.changeNationalNumber {
+  background-color: transparent;
+  border: none;
+  color: #1890ff;
+  font-size: 12px;
+  text-align: left;
+  box-shadow: unset;
+  text-shadow: none;
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+    color: #1890ff;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border: none;
+    color: #1890ff;
+  }
+}
+
+.otpModalBody {
+  font-size: 12px;
+  color: #7f909e;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.otpModalContent {
+  width: 352px !important;
+
+  :global {
+    .ant-modal-content {
+      width: 100%;
+      max-width: 100%;
+      margin-right: unset;
+    }
+  }
+}
+
+.rejectModalContent {
+  width: 220px !important;
+
+  :global {
+    .ant-modal-content {
+      width: 100%;
+      max-width: 100%;
+      margin-right: unset;
+    }
+  }
+}
+
+.previewBox {
+  .group {
+    .groupItems {
+      margin-bottom: 12px;
+
+      .groupItem {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 4px;
+
+        &.fullWidth {
+          .label,
+          .value {
+            flex-basis: 100% !important;
+            text-align: right;
+          }
+        }
+
+        .label,
+        .value {
+          flex-basis: 50%;
+          text-align: right;
+        }
+
+        .value {
+          color: #000;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.captcha {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: space(24);
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__form {
+    width: 100%;
+
+    & input {
+      font-family: sans-serif;
+
+      &::placeholder {
+        font-family: dana, sans-serif;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: color(primary);
+    font-size: font(16);
+    position: relative;
+    margin-bottom: 12px;
+
+    input {
+      width: 145px;
+    }
+
+    & :global {
+      .ant-spin-nested-loading {
+        flex-grow: 1;
+
+        & img {
+          border-radius: radius(2);
+          border: 1px solid #d9d9d9;
+          width: 91%;
+          height: 32px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    & svg {
+      flex-shrink: 0;
+      cursor: pointer;
+      margin-right: space(16);
+    }
+  }
+}

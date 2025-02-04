@@ -1,0 +1,364 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "text",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {
+                  "required": true,
+                  "input": {
+                    "maxLength": 6,
+                    "message": "نام وارد شده نباید از 6 کاراکتر طولانی تر باشد"
+                  }
+                },
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {
+                  "required": true
+                },
+                "actions": {}
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 3,
+              "entityType": "field",
+              "entity": {
+                "name": "field4",
+                "label": "فیلد چهارم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد چهارم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "hidden": true
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}",
+          "field4": "${group-one.field4}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}",
+          "group-one.field4": "${field4}"
+        }
+      }
+    },
+    {
+      "name": "TWO",
+      "label": "مرحله دوم",
+      "groups": [
+        {
+          "name": "group-two",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "text",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-two.field1}",
+          "field2": "${group-two.field2}",
+          "field3": "${group-two.field3}"
+        },
+        "toStore": {
+          "group-two.field1": "${field1}",
+          "group-two.field2": "${field2}",
+          "group-two.field3": "${field3}"
+        }
+      }
+    },
+    {
+      "name": "THREE",
+      "label": "گروه سوم",
+      "groups": [
+        {
+          "name": "collateralType",
+          "label": "اعتبار",
+          "order": 0,
+          "descriptions": [
+            ""
+          ],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "collateralType",
+                "label": "توع",
+                "type": "select",
+                "placeHolder": "لطفا",
+                "value": "CHEQUE",
+                "validation": {
+                  "required": true,
+                  "select": {
+                    "multiple": false,
+                    "message": "حتما"
+                  }
+                },
+                "initialData": [
+                  {
+                    "id": "CHEQUE",
+                    "label": "چک"
+                  },
+                  {
+                    "id": "PROMISSORY_NOTE",
+                    "label": "سفته"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "amount",
+                "label": "میزان",
+                "type": "slider",
+                "placeHolder": "",
+                "value": 40000000,
+                "validation": {
+                  "required": true
+                },
+                "hidden": {
+                  "combination": "or",
+                  "constraints": [
+                    {
+                      "path": "collateralType.collateralType",
+                      "value": "CORPORATE_GUARANTEE",
+                      "match": "exact"
+                    }
+                  ]
+                },
+                "step": 30000000,
+                "steps": [
+                  {
+                    "value": 40000000,
+                    "label": "40 میلیون ریال"
+                  },
+                  {
+                    "value": 70000000,
+                    "label": "70 میلیون ریال"
+                  },
+                  {
+                    "value": 100000000,
+                    "label": "100 میلیون ریال",
+                    "hideAt": "PROMISSORY_NOTE"
+                  }
+                ],
+                "itemsDependsOn": {
+                  "match": "not",
+                  "path": "hideAt",
+                  "value": "collateralType.collateralType"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "resolve": {
+        "token": {
+          "method": "GET",
+          "header": {
+            "authorization": "bearer ${localStorage:token}"
+          },
+          "body": {},
+          "url": "/v1/documents/token/collateral/${url:applicationId}"
+        }
+      },
+      "map": {
+        "toService": {
+          "field1": "${group-two.field1}",
+          "field2": "${group-two.field2}",
+          "field3": "${group-two.field3}"
+        },
+        "toStore": {
+          "group-two.field1": "${field1}",
+          "group-two.field2": "${field2}",
+          "group-two.field3": "${field3}"
+        }
+      }
+    },
+    {
+      "name": "THREE",
+      "label": "مرحله سوم",
+      "groups": [
+        {
+          "name": "group-two",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "collateralType",
+                "label": "توع",
+                "type": "select",
+                "placeHolder": "لطفا",
+                "value": "CHEQUE",
+                "validation": {
+                  "required": true,
+                  "select": {
+                    "multiple": false,
+                    "message": "حتما"
+                  }
+                },
+                "initialData": [
+                  {
+                    "id": "CHEQUE",
+                    "label": "چک"
+                  },
+                  {
+                    "id": "PROMISSORY_NOTE",
+                    "label": "سفته"
+                  }
+                ]
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "amount",
+                "label": "میزان",
+                "type": "slider",
+                "placeHolder": "",
+                "value": 40000000,
+                "validation": {
+                  "required": true
+                },
+                "hidden": {
+                  "combination": "or",
+                  "constraints": [
+                    {
+                      "path": "collateralType.collateralType",
+                      "value": "CORPORATE_GUARANTEE",
+                      "match": "exact"
+                    }
+                  ]
+                },
+                "step": 30000000,
+                "steps": [
+                  {
+                    "value": 40000000,
+                    "label": "40 میلیون ریال"
+                  },
+                  {
+                    "value": 70000000,
+                    "label": "70 میلیون ریال"
+                  },
+                  {
+                    "value": 100000000,
+                    "label": "100 میلیون ریال",
+                    "hideAt": "PROMISSORY_NOTE"
+                  }
+                ],
+                "itemsDependsOn": {
+                  "match": "not",
+                  "path": "hideAt",
+                  "value": "collateralType.collateralType"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-two.field1}",
+          "field2": "${group-two.field2}",
+          "field3": "${group-two.field3}"
+        },
+        "toStore": {
+          "group-two.field1": "${field1}",
+          "group-two.field2": "${field2}",
+          "group-two.field3": "${field3}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "preCondition": {
+    "product": "PRODUCT-NAME",
+    "other": false,
+    "nationalCode": "0015509184",
+    "registrationNumber": null,
+    "relationshipType": null
+  },
+  "applicationInfo": {
+    "subtitle": null,
+    "applicationID": "5f54b1a49fdddf5bfe80a968",
+    "applicationStatus": "IN_PROGRESS",
+    "stagingState": "DATA_ENTRY",
+    "stagingDescription": "",
+    "currentStage": "ONE",
+    "thirdParty": false,
+    "applicationFinalStatus": "IN_PROGRESS",
+    "products": ["PRODUCT-NAME"]
+  },
+  "stages": [
+    {
+      "@name": "Stage1",
+      "stageType": "ONE",
+      "order": 1,
+      "title": "مرحله اول",
+      "state": "EMPTY",
+      "isEnabled": true,
+      "data": {
+        "field1": "لورم ایپسوم",
+        "field2": "لورم ایپسوم یک متن تستی است",
+        "field3": ""
+      }
+    },
+    {
+      "@name": "Stage2",
+      "stageType": "TWO",
+      "order": 2,
+      "title": "مرحله دوم",
+      "state": "FILLED",
+      "isEnabled": true,
+      "data": {
+        "field1": "مقدار اول",
+        "field2": "مقدار دوم",
+        "field3": "مقدار سوم"
+      }
+    }
+  ],
+  "errors": {
+    "description": null,
+    "items": []
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "schedule",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "fromTimeEpoch": 1600255255,
+                    "toTimeEpoch": 1800855255,
+                    "capacity": 2,
+                    "id": 1
+                  },
+                  {
+                    "fromTimeEpoch": 1600255255,
+                    "toTimeEpoch": 1700856355,
+                    "capacity": 4,
+                    "id": 2
+                  }
+                ]
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "schedule",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": {
+                  "required": true
+                },
+                "actions": {},
+                "initialData": [
+                  {
+                    "fromTimeEpoch": 1300255255,
+                    "toTimeEpoch": 1800855255,
+                    "capacity": 2,
+                    "id": 1
+                  },
+                  {
+                    "fromTimeEpoch": 1200255255,
+                    "toTimeEpoch": 1300856355,
+                    "capacity": 4,
+                    "id": 2
+                  },
+                  {
+                    "fromTimeEpoch": 2000255255,
+                    "toTimeEpoch": 2100856355,
+                    "capacity": 8,
+                    "id": 3
+                  }
+                ]
+              }
+            },
+            {
+              "order": 2,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "schedule",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {
+                  "required": true
+                },
+                "actions": {},
+                "initialData": [
+                  {
+                    "fromTimeEpoch": 1411255255,
+                    "toTimeEpoch": 1500855255,
+                    "capacity": 2,
+                    "id": 1
+                  },
+                  {
+                    "fromTimeEpoch": 1400255255,
+                    "toTimeEpoch": 1500855255,
+                    "capacity": 3,
+                    "id": 2
+                  },
+                  {
+                    "fromTimeEpoch": 1600255255,
+                    "toTimeEpoch": 1700855255,
+                    "capacity": 4,
+                    "id": 3
+                  }
+                ]
+              }
+            },
+            {
+              "order": 3,
+              "entityType": "field",
+              "entity": {
+                "name": "field4",
+                "label": "فیلد چهارم",
+                "type": "schedule",
+                "placeHolder": "مقدار فیلد چهارم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "initialData": [
+                  {
+                    "fromTimeEpoch": 1000255255,
+                    "toTimeEpoch": 1100855255,
+                    "capacity": 2,
+                    "id": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}",
+          "field4": "${group-one.field4}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}",
+          "group-one.field4": "${field4}"
+        }
+      }
+    }
+  ]
+}

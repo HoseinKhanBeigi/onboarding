@@ -1,0 +1,231 @@
+@import './../variables';
+
+.container {
+  :global {
+    .ant-steps-item-container {
+      display: flex !important;
+    }
+
+    .ant-layout-sider.ant-layout-sider-collapsed .ant-steps-item-title {
+      @media screen and (max-width: 1023px) {
+        display: none !important;
+      }
+    }
+
+    .ant-steps-vertical.ant-steps-small .ant-steps-item-container .ant-steps-item-tail {
+      left: -8px !important;
+      top: -10px !important;
+    }
+
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+      opacity: 0.25;
+      background-color: #fff;
+      height: 46px !important;
+      width: 2px !important;
+    }
+
+    .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after {
+      opacity: 0.25;
+      background-color: #fff;
+      height: 36px !important;
+      width: 2px !important;
+    }
+
+    .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+      opacity: 0.55;
+      color: #fff !important;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+      font-size: 14px;
+      text-align: right;
+      color: #fff !important;
+      width: 100%;
+    }
+
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+      font-size: 14px;
+      text-align: right;
+      color: #fff;
+      width: 100%;
+    }
+
+    .ant-steps-vertical {
+      @media screen and (min-width: 1024px) {
+        max-height: 400px;
+        overflow: auto;
+        z-index: 999;
+        background:
+          linear-gradient(#334357 30%, rgba(255, 255, 255, 0)),
+          linear-gradient(rgba(255, 255, 255, 0), #334357 70%) 0 100%,
+          radial-gradient(50% 0, farthest-side, #283546, rgba(0, 0, 0, 0)),
+          radial-gradient(50% 100%, farthest-side, #283546, rgba(0, 0, 0, 0)) 0 100%;
+        background:
+          linear-gradient(#334357 30%, rgba(255, 255, 255, 0)),
+          linear-gradient(rgba(255, 255, 255, 0), #334357 70%) 0 100%,
+          radial-gradient(farthest-side at 50% 0, #283546, rgba(0, 0, 0, 0)),
+          radial-gradient(farthest-side at 50% 100%, #283546, rgba(0, 0, 0, 0)) 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+        background-attachment: local, local, scroll, scroll;
+      }
+
+      .ant-steps-item {
+        max-width: 264px;
+        margin: auto;
+
+        @media screen and (min-width: 1024px) {
+          width: 100%;
+          max-width: 349px;
+          margin: auto;
+        }
+      }
+
+      .ant-steps-item:not(:last-child) {
+        height: 48px;
+      }
+    }
+
+    .ant-steps-vertical .ant-steps-item-icon {
+      margin-right: 0;
+    }
+
+    .ant-steps-vertical > .ant-steps-item:not(:last-child) > .ant-steps-item-container > .ant-steps-item-tail {
+      width: 100%;
+    }
+
+    .ant-steps-small .ant-steps-item-title {
+      padding-right: 24px;
+    }
+
+    .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+      color: unset;
+    }
+
+    .ant-steps-item-finish .ant-steps-item-icon {
+      border-color: unset;
+    }
+
+    .ant-steps-item-icon {
+      width: 18px !important;
+      height: 18px !important;
+    }
+
+    .anticon svg {
+      margin-bottom: 0 !important;
+      width: 10px;
+      height: 10px;
+    }
+
+    .ant-steps-item-content {
+      width: 100%;
+    }
+
+    aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed {
+      @media screen and (max-width: 1023px) {
+        max-width: 48px !important;
+        min-width: 48px !important;
+        width: 48px !important;
+
+        .stepContainer {
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+}
+
+.editBtn {
+  width: 62px !important;
+  height: 26px !important;
+  border-radius: 20px !important;
+  border: solid 1px rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 4px 12px !important;
+
+  &:hover,
+  &:focus &:active {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.greenCheck {
+  color: #00c073 !important;
+  margin-right: -7px;
+
+  svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+.whiteCheck {
+  color: white;
+  margin-right: -7px;
+
+  svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+.error {
+  color: #ff5252;
+  margin-right: -7px;
+
+  svg {
+    color: #ff5252;
+    width: 18px !important;
+    height: 18px !important;
+
+    path {
+      color: #ff5252;
+    }
+  }
+}
+
+.grayInfo {
+  color: #858585;
+  margin-right: -7px;
+
+  svg {
+    color: #858585;
+    width: 18px !important;
+    height: 18px !important;
+
+    path {
+      color: #858585;
+
+      &:nth-of-type(2) {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.activateState {
+  margin-right: -7px;
+}

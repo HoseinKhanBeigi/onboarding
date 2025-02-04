@@ -1,0 +1,91 @@
+@import '../../components/variables';
+
+.Container {
+  color: $font-color;
+  max-width: 376px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04);
+  background-color: #fefefe;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.optionsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.quizOption {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: start;
+
+  :global {
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #4cc656;
+      border-color: #4cc656;
+    }
+  }
+
+  span {
+    color: #1c1c1c;
+    font-size: 12px;
+  }
+}
+
+.submitExamBtn {
+  width: 100%;
+  height: 40px;
+  margin-top: 24px;
+  background-color: #4cc656;
+  border-color: #4cc656;
+
+  span {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.58;
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #4cc656;
+    border-color: #4cc656;
+  }
+}
+
+.descContainer {
+  margin: 24px 0 32px;
+}
+
+.description {
+  width: auto;
+  padding: 8px 5px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: right;
+  color: rgba(21, 53, 78, 0.55);
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  img {
+    padding: 0 0 5px 6px;
+    width: auto !important;
+    border: unset !important;
+  }
+}

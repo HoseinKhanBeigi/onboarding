@@ -1,0 +1,10 @@
+@import '../../../base';
+
+.overlay {
+  position: relative;
+  background-image: url('/static/images/signature-stage-mask.svg');
+  background-position: center;
+  background-size: cover;
+
+  @extend %full-of-Parent;
+}

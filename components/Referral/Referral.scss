@@ -1,0 +1,38 @@
+@import '../variables';
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  :global {
+    button {
+      padding: 0 5px;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  & > * {
+    margin-bottom: 12px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .input {
+    height: 34px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .labelTitle {
+    line-height: 21px;
+    color: $input-label;
+    padding: 0 12px;
+    margin-bottom: 4px;
+    display: block;
+  }
+}

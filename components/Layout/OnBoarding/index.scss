@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.layout {
+  background: #f8f9fd;
+  padding: 0;
+  overflow-y: auto;
+
+  @extend %full-height;
+}
+
+:global {
+  .ant-layout-content {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: unset !important;
+    margin: auto;
+  }
+}

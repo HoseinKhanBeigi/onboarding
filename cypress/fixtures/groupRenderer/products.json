@@ -1,0 +1,149 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "گروه اول",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field1",
+                "label": "فیلد اول",
+                "type": "text",
+                "placeHolder": "مقدار فیلد اول را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "group-two",
+          "label": "گروه دوم",
+          "order": 1,
+          "descriptions": [
+            "لطفا این گروه را پر نمایید",
+            "فیلد های این گروه اجباری است",
+            "با پر کردن این گروه اطلاعات شما ذخیره خواهد شد"
+          ],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field2",
+                "label": "فیلد دوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد دوم را وارد کنید",
+                "validation": { "required": true },
+                "actions": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "group-three",
+          "label": "گروه سوم",
+          "order": 2,
+          "descriptions": ["پر کردن این گروه اجباری نیست"],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field3",
+                "label": "فیلد سوم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد سوم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "group-four",
+          "label": "گروه چهارم",
+          "order": 3,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 0,
+              "entityType": "field",
+              "entity": {
+                "name": "field4",
+                "label": "فیلد چهارم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد چهارم را وارد کنید",
+                "validation": {},
+                "actions": {}
+              }
+            },
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field5",
+                "label": "فیلد پنجم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد پنجم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "hidden": true
+              }
+            }
+          ]
+        },
+        {
+          "name": "group-five",
+          "label": "گروه پنجم",
+          "order": 4,
+          "descriptions": [],
+          "entities": [
+            {
+              "order": 1,
+              "entityType": "field",
+              "entity": {
+                "name": "field6",
+                "label": "فیلد ششم",
+                "type": "text",
+                "placeHolder": "مقدار فیلد ششم را وارد کنید",
+                "validation": {},
+                "actions": {},
+                "hidden": true
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "field1": "${group-one.field1}",
+          "field2": "${group-one.field2}",
+          "field3": "${group-one.field3}",
+          "field4": "${group-one.field4}",
+          "field5": "${group-one.field5}",
+          "field6": "${group-one.field6}"
+        },
+        "toStore": {
+          "group-one.field1": "${field1}",
+          "group-one.field2": "${field2}",
+          "group-one.field3": "${field3}",
+          "group-one.field4": "${field4}",
+          "group-one.field5": "${field5}",
+          "group-one.field6": "${field6}"
+        }
+      }
+    }
+  ]
+}

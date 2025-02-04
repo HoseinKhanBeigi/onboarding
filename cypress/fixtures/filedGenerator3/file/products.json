@@ -1,0 +1,125 @@
+{
+  "id": "product-name",
+  "name": "product-name",
+  "label": "ثبت نام محصول",
+  "stages": [
+    {
+      "name": "ONE",
+      "label": "مرحله اول",
+      "groups": [
+        {
+          "name": "group-one",
+          "label": "",
+          "order": 0,
+          "descriptions": [],
+          "entities": [
+            {
+              "entityType": "field",
+              "order": 0,
+              "entity": {
+                "name": "field1",
+                "label": "فایل مثال",
+                "type": "file",
+                "placeHolder": "تصویر ",
+                "fileConfig": {
+                  "upload": {
+                    "url": "/v1/file/upload",
+                    "method": "POST",
+                    "header": {
+                      "Application-Name": "KIAN_DIGITAL",
+                      "Authorization": "bearer ${localStorage:token}"
+                    },
+                    "body": {}
+                  },
+                  "get": {
+                    "url": "/v1/file/download?filename=${data:filename}",
+                    "method": "GET",
+                    "header": {
+                      "X-Objects-Token": "${data:token}",
+                      "Authorization": "bearer ${localStorage:token}",
+                      "Context": "KIAN_DIGITAL"
+                    },
+                    "body": {}
+                  }
+                },
+                "validation": {
+                  "required": true,
+                  "file": {
+                    "multiple": false,
+                    "accept": "image/*,.pdf",
+                    "maxSize": 4096,
+                    "message": "فایل انتخاب شده بایستی از نوع تصویر و یا pdf با حجم حداکثر ۴ مگابایت باشد"
+                  }
+                },
+                "resolve": {
+                  "token": {
+                    "type": "store",
+                    "path": "documents.token.token"
+                  }
+                }
+              }
+            },
+            {
+              "entityType": "field",
+              "order": 1,
+              "entity": {
+                "name": "field2",
+                "label": "فایل مثال 2",
+                "type": "file",
+                "placeHolder": "تصویر 2",
+                "fileConfig": {
+                  "upload": {
+                    "url": "/v1/file/upload",
+                    "method": "POST",
+                    "header": {
+                      "Application-Name": "KIAN_DIGITAL",
+                      "Authorization": "bearer ${localStorage:token}"
+                    },
+                    "body": {}
+                  },
+                  "get": {
+                    "url": "/v1/file/download?filename=${data:filename}",
+                    "method": "GET",
+                    "header": {
+                      "X-Objects-Token": "${data:token}",
+                      "Authorization": "bearer ${localStorage:token}",
+                      "Context": "KIAN_DIGITAL"
+                    },
+                    "body": {}
+                  }
+                },
+                "validation": {
+                  "required": true,
+                  "file": {
+                    "multiple": false,
+                    "accept": "image/*,.pdf",
+                    "maxSize": 4096,
+                    "message": "فایل انتخاب شده بایستی از نوع تصویر و یا pdf با حجم حداکثر ۴ مگابایت باشد"
+                  }
+                },
+                "resolve": {
+                  "token": {
+                    "type": "store",
+                    "path": "documents.token.token"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "map": {
+        "toService": {
+          "documents[+]": "${documents.field1}",
+          "documents[+1]": "${documents.field2}"
+
+        },
+        "toStore": {
+          "documents.field1.fileId": "${documents[find:type==field1].files[0].fileID}",
+          "documents.field2.fileId": "${documents[find:type==field2].files[0].fileID}"
+        }
+      }
+    }
+  ]
+}
+
